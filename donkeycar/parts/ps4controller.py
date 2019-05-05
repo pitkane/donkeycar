@@ -328,7 +328,7 @@ class PS4Controller(object):
 
                 print('max_throttle:', self.max_throttle)
 
-            if button == 'L' and button_state == 1:
+            if button == 'L2' and button_state == 1:
                 """
                 decrease max throttle setting
                 """
@@ -340,7 +340,7 @@ class PS4Controller(object):
 
                 print('max_throttle:', self.max_throttle)
 
-            if button == 'base' and button_state == 1:
+            if button == 'R1' and button_state == 1:
                 """
                 increase throttle scale
                 """
@@ -348,7 +348,7 @@ class PS4Controller(object):
                     min(0.0, self.throttle_scale + 0.05), 2)
                 print('throttle_scale:', self.throttle_scale)
 
-            if button == 'top2' and button_state == 1:
+            if button == 'L1' and button_state == 1:
                 """
                 decrease throttle scale
                 """
@@ -356,7 +356,7 @@ class PS4Controller(object):
                     max(-1.0, self.throttle_scale - 0.05), 2)
                 print('throttle_scale:', self.throttle_scale)
 
-            if button == 'base2' and button_state == 1:
+            if button == 'ANALOGRIGHTBUTTON' and button_state == 1:
                 """
                 increase steering scale
                 """
@@ -364,7 +364,7 @@ class PS4Controller(object):
                     min(1.0, self.steering_scale + 0.05), 2)
                 print('steering_scale:', self.steering_scale)
 
-            if button == 'pinkie' and button_state == 1:
+            if button == 'ANALOGLEFTBUTTON' and button_state == 1:
                 """
                 decrease steering scale
                 """
