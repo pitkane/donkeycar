@@ -30,7 +30,7 @@ class Joystick():
             0x04: 'ry',
             0x05: 'rz',
             0x06: 'trottle',
-            0x07: 'rudder',
+            # 0x07: 'rudder',
             0x08: 'wheel',
             0x09: 'gas',
             0x0a: 'brake',
@@ -44,8 +44,8 @@ class Joystick():
             0x17: 'hat3y',
             0x18: 'pressure',
             0x19: 'distance',
-            0x1a: 'tilt_x',
-            0x1b: 'tilt_y',
+            # 0x1a: 'tilt_x',
+            # 0x1b: 'tilt_y',
             0x1c: 'tool_width',
             0x20: 'volume',
             0x28: 'misc',
@@ -201,7 +201,7 @@ class Joystick():
                     fvalue = value / 32767.0
                     self.axis_states[axis] = fvalue
                     axis_val = fvalue
-                    print(axis)
+                    print(axis, end=": ")
                     print(value)
 
         return button, button_state, axis, axis_val
