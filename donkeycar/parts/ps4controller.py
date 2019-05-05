@@ -29,7 +29,7 @@ class Joystick():
             0x03: 'rx',
             0x04: 'ry',
             0x05: 'rz',
-            0x06: 'trottle',
+            0x06: 'throttle',
             0x07: 'rudder',
             0x08: 'wheel',
             0x09: 'gas',
@@ -66,16 +66,16 @@ class Joystick():
             0x12b: 'base6',
 
             0x130: 'square',
-            0x131: 'cross',
-            0x132: 'circle',
+            0x131: 'cross',  # emergency stop
+            0x132: 'circle',  # start recording
             0x133: 'triangle',
-            0x134: 'L1',
-            0x135: 'R1',
+            0x134: 'L1',  # decrease throttle scale
+            0x135: 'R1',  # increase throttle scale
 
-            0x136: 'L2',
-            0x137: 'R2',
-            0x138: 'share',
-            0x139: 'options',
+            0x136: 'L2',  # decrease max throttle
+            0x137: 'R2',  # increase max throttle
+            0x138: 'share',  # activate constant throttle
+            0x139: 'options',  # change mode
             # 0x13a : 'unknown',
             # 0x13b : 'unknown',
             0x13a: 'ANALOGLEFTBUTTON',
