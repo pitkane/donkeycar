@@ -325,7 +325,7 @@ class PS4Controller(object):
 
                 print('recording:', self.recording)
 
-            if button == 'triangle' and button_state == 1:
+            if button == 'dpad_up' and button_state == 1:
                 """
                 increase max throttle setting
                 """
@@ -337,7 +337,7 @@ class PS4Controller(object):
 
                 print('max_throttle:', self.max_throttle)
 
-            if button == 'cross' and button_state == 1:
+            if button == 'dpad_down' and button_state == 1:
                 """
                 decrease max throttle setting
                 """
@@ -394,6 +394,16 @@ class PS4Controller(object):
                     self.throttle = self.max_throttle
                     self.on_throttle_changes()
                 print('constant_throttle:', self.constant_throttle)
+
+            if button == 'cross' and button_state == 1:
+                """
+                Emenrgency Stop
+                """
+                print('Emergency Stop!!!')
+                self.mode = "user"
+                self.recording = False
+                self.constant_throttle = False
+                self.throttle = 0.0
 
             time.sleep(self.poll_delay)
 
