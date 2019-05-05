@@ -193,6 +193,7 @@ class Joystick():
                 if button:
                     self.button_states[button] = value
                     button_state = value
+                    print(button)
 
             if typev & 0x02:
                 axis = self.axis_map[number]
@@ -200,6 +201,8 @@ class Joystick():
                     fvalue = value / 32767.0
                     self.axis_states[axis] = fvalue
                     axis_val = fvalue
+                    print(axis)
+                    print(value)
 
         return button, button_state, axis, axis_val
 
