@@ -43,7 +43,7 @@ class Joystick():
             0x16: 'hat3x',
             0x17: 'hat3y',
             0x18: 'pressure',
-            0x19: 'distance',
+            # 0x19: 'distance',
             # 0x1a: 'tilt_x',
             # 0x1b: 'tilt_y',
             0x1c: 'tool_width',
@@ -65,33 +65,21 @@ class Joystick():
             0x12a: 'base5',
             0x12b: 'base6',
 
-            # PS3 sixaxis specific
-            # 0x12c : "triangle",
-            # 0x12d : "circle",
-            # 0x12e : "cross",
-            # 0x12f : 'square',
-
-            # 0x130 : 'a',
-            # 0x131 : 'b',
-            # 0x132 : 'c',
-            # 0x133 : 'x',
-            # 0x134 : 'y',
-            # 0x135 : 'z',
             0x130: 'square',
             0x131: 'cross',
             0x132: 'circle',
             0x133: 'triangle',
-            0x134: 'y',
-            0x135: 'z',
+            0x134: 'L1',
+            0x135: 'R1',
 
-            0x136: 'tl',
-            0x137: 'tr',
+            0x136: 'L2',
+            0x137: 'R2',
             0x138: 'share',
             0x139: 'options',
-            # 0x13a : 'select',
-            # 0x13b : 'start',
-            0x13a: 'ANALOGLEFT',
-            0x13b: 'ANALOGRIGHT',
+            # 0x13a : 'unknown',
+            # 0x13b : 'unknown',
+            0x13a: 'ANALOGLEFTBUTTON',
+            0x13b: 'ANALOGRIGHTBUTTON',
             0x13c: 'mode',
             0x13d: 'thumbl',
             0x13e: 'thumbr',
@@ -328,7 +316,7 @@ class PS4Controller(object):
 
                 print('recording:', self.recording)
 
-            if button == 'dpad_up' and button_state == 1:
+            if button == 'R2' and button_state == 1:
                 """
                 increase max throttle setting
                 """
@@ -340,7 +328,7 @@ class PS4Controller(object):
 
                 print('max_throttle:', self.max_throttle)
 
-            if button == 'dpad_down' and button_state == 1:
+            if button == 'L' and button_state == 1:
                 """
                 decrease max throttle setting
                 """
