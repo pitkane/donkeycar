@@ -75,12 +75,12 @@ class Joystick():
             0x136: 'L2',  # decrease max throttle
             0x137: 'R2',  # increase max throttle
             0x138: 'share',  # activate constant throttle
-            0x139: 'options',  # change mode
+            0x139: 'options',
             # 0x13a : 'unknown',
             # 0x13b : 'unknown',
             0x13a: 'ANALOGLEFTBUTTON',
             0x13b: 'ANALOGRIGHTBUTTON',
-            0x13c: 'mode',
+            0x13c: 'mode',  # change mode
             0x13d: 'thumbl',
             0x13e: 'thumbr',
 
@@ -288,7 +288,7 @@ class PS4Controller(object):
                 print("throttle", self.throttle)
                 self.on_throttle_changes()
 
-            if button == 'options' and button_state == 1:
+            if button == 'mode' and button_state == 1:
                 """
                 switch modes from:
                 user: human controlled steer and throttle
