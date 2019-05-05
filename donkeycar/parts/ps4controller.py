@@ -321,7 +321,7 @@ class PS4Controller(object):
                 increase max throttle setting
                 """
                 self.max_throttle = round(
-                    min(1.0, self.max_throttle + 0.01), 2)
+                    min(1.0, self.max_throttle + 0.05), 2)
                 if self.constant_throttle:
                     self.throttle = self.max_throttle
                     self.on_throttle_changes()
@@ -333,7 +333,7 @@ class PS4Controller(object):
                 decrease max throttle setting
                 """
                 self.max_throttle = round(
-                    max(0.0, self.max_throttle - 0.01), 2)
+                    max(0.0, self.max_throttle - 0.05), 2)
                 if self.constant_throttle:
                     self.throttle = self.max_throttle
                     self.on_throttle_changes()
